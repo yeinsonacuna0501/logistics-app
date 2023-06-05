@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Logistics App</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+  <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
+    <a class="navbar-brand">Logistics App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToClientes()"><span class="sr-only">Clientes</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="goToBodegas()"><span class="sr-only">Bodegas</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goToPuertos()"><span class="sr-only">Puertos</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goToProductos()"><span class="sr-only">Productos</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goToLogisticaMaritima()"><span class="sr-only">Logistica terrestre</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goToLogisticaTerrestre()"><span class="sr-only">Logistica maritima</span></a>
+          </li>
+      </ul>
+    </div>
+    </nav>
+    <main role="main" class="container-fluid">
+      <app-root></app-root>
+    </main>
+  </body>
+</html>
