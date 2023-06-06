@@ -1,2 +1,27 @@
 <app-principal></app-principal>
-<p>puertos works!</p>
+<div class="container">
+    <h2>Lista de puertos</h2>
+    <ul class="list-group">
+       <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-2"><strong>Nombre</strong></div>
+              <div class="col-md-2"><strong>Dirección</strong></div>
+              <div class="col-md-2"><strong>Ciudad</strong></div>
+              <div class="col-md-2"><strong>Teléfono</strong></div>
+              <div class="col-md-2"><strong>Acciones</strong></div>
+            </div>
+        </li>
+      <li *ngFor="let item of items" class="list-group-item">
+        <div class="row">
+            <div class="col-md-2">{{ item.nombre }}</div>
+            <div class="col-md-2">{{ item.direccion }}</div>
+            <div class="col-md-2">{{ item.ciudad }}</div>
+            <div class="col-md-2">{{ item.telefono }}</div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" >Editar</button>
+                <button class="btn btn-danger" >Eliminar</button>
+              </div>
+          </div>
+      </li>
+    </ul>
+  </div>

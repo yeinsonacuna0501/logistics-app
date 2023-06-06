@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit , ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,15 +7,23 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./bodegas.component.css']
 })
 
+
 export class BodegasComponent implements OnInit {
   items: any[] = [];
   searchTerm: string = '';
 
   constructor(private http: HttpClient) { }
 
+  @ViewChild('myModal') myModal!: ElementRef;
+
   ngOnInit() {
     this.obtenerItems();
   }
+
+  openModal() {
+    this.myModal.nativeElement.modal('show');
+  }
+  
 
   obtenerItems() {
     this.http.get('https://localhost:7206/api/bodegas').subscribe((response: any) => {
